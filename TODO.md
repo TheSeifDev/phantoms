@@ -28,4 +28,4 @@
 
 - [x] **المعاينة والبناء:** تعمل WebDev Preview على الصفحات والمسارات المحددة. نجحت `pnpm typecheck` و`pnpm lint` و`pnpm build` للتصدير الثابت. لا اتصال قاعدة بيانات ولا Neon، ولم يُنشر الموقع للعامة ولا يُفعّل Auto Publish.
 
-- [ ] **حفظ التحديثات:** حفظ checkpoint للنسخة الجديدة وتحديث `https://github.com/TheSeifDev/phantoms.git` على `main` دون force-push، مع الحفاظ على تعديلات المستخدم وعدم تعديل مستودعي Dashboard وRafiq.
+- [x] **حفظ التحديثات:** حفظ checkpoint للنسخة الجديدة وتحديث `https://github.com/TheSeifDev/phantoms.git` على `main` دون force-push، مع الحفاظ على تعديلات المستخدم وعدم تعديل مستودعي Dashboard وRafiq.
