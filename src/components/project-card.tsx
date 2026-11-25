@@ -5,17 +5,15 @@ import { ArrowUpRight, MoveUpRight } from "lucide-react";
 import type { CSSProperties } from "react";
 import type { Project } from "@/data/site";
 import { useSite } from "@/components/site-provider";
+import { ProjectMockup } from "@/components/project-mockup";
 
 export function ProjectCard({ project, index = 0 }: { project: Project; index?: number }) {
   const { t } = useSite();
   return (
     <article className={`project-card project-card--${project.tone}`} data-reveal style={{ "--card-index": index } as CSSProperties}>
       <Link className="project-card__hit" href={`/work/${project.slug}`} aria-label={`${project.name} — ${t(project.category)}`}>
-        <div className="project-card__art" aria-hidden="true">
-          <div className="project-card__orbit project-card__orbit--one" />
-          <div className="project-card__orbit project-card__orbit--two" />
-          <div className="project-card__shape"><span>{project.name.slice(0, 1)}</span></div>
-          <span className="project-card__art-label">{project.number} / PHANTOMS</span>
+        <div className="project-card__art">
+          <ProjectMockup project={project} />
           <span className="project-card__open"><ArrowUpRight size={18} /></span>
         </div>
         <div className="project-card__body">

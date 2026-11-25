@@ -83,7 +83,7 @@ export const projects: Project[] = [
     number: "02",
     name: "Phantoms Dashboard",
     category: { en: "SaaS · Internal platform", ar: "SaaS · منصة داخلية" },
-    status: { en: "In use by the team", ar: "منصة للفريق" },
+    status: { en: "Team platform", ar: "منصة للفريق" },
     summary: {
       en: "A connected operations workspace for the people, projects and workflows that keep a growing team moving.",
       ar: "مساحة تشغيل مترابطة للأشخاص والمشاريع وسير العمل الذي يحرك الفريق.",
@@ -97,8 +97,8 @@ export const projects: Project[] = [
       ar: "تجمع لوحة مشتركة أدوات الأعضاء والمهام ومسارات العمل الداخلية في منتج واحد للفريق.",
     },
     outcome: {
-      en: "A living internal platform that is being developed alongside the team’s real operating needs.",
-      ar: "منصة داخلية تتطور بالتوازي مع احتياجات الفريق الفعلية.",
+      en: "An internal-platform project with a public code repository. The visuals here are illustrative concepts; usage and measured results are not claimed.",
+      ar: "مشروع منصة داخلية له مستودع كود عام. الصور هنا تصورات توضيحية؛ لا ندّعي استخدامًا فعليًا أو نتائج مقاسة.",
     },
     tags: ["SaaS", "Operations", "Team tools"],
     tone: "ink",

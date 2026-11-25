@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/site";
 import { useSite } from "@/components/site-provider";
 import { ActionLink } from "@/components/action-link";
+import { ProjectMockup } from "@/components/project-mockup";
 
 export function ProjectDetail({ project }: { project: Project }) {
   const { locale, t } = useSite();
@@ -25,7 +26,7 @@ export function ProjectDetail({ project }: { project: Project }) {
           <h1>{project.name}</h1>
           <p>{t(project.summary)}</p>
         </div>
-        <div className="project-detail__visual" aria-hidden="true"><span className="visual-orbit visual-orbit--a" /><span className="visual-orbit visual-orbit--b" /><span className="visual-core">{project.name.slice(0, 1)}</span><span className="visual-caption">PHANTOMS / {project.number}</span></div>
+        <div className="project-detail__visual"><ProjectMockup project={project} large /></div>
         <div className="project-detail__tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
       </div>
       <section className="project-story section-wrap">

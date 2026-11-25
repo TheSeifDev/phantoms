@@ -1,0 +1,9 @@
+.project-mockup { position:absolute; inset:0; overflow:hidden; background:#171718; }
+.project-mockup > img { object-fit:cover; transition:transform .65s cubic-bezier(.2,.7,.2,1); }
+.project-card:hover .project-mockup > img { transform:scale(1.045); }
+.project-mockup--rafiq { background:#ede7dc; }
+.project-mockup__label { position:absolute; inset-inline-start:14px; bottom:15px; padding:7px 9px; background:rgba(9,9,10,.75); color:#fff; font-family:var(--font-mono),monospace; font-size:6px; letter-spacing:.12em; backdrop-filter:blur(8px); }
+.project-mockup__number { position:absolute; top:15px; inset-inline-end:14px; font-family:var(--font-mono),monospace; font-size:7px; color:white; mix-blend-mode:difference; }
+.project-mockup--large .project-mockup__label { bottom:22px; inset-inline-start:22px; font-size:8px; }
+.project-mockup--large .project-mockup__number { top:22px; inset-inline-end:22px; font-size:9px; }
+@media (prefers-reduced-motion:reduce) { .project-mockup > img { transition:none; } }
