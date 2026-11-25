@@ -1,0 +1,640 @@
+/* Interior pages: restrained technical typography, open layouts and hairline rules. */
+.interior-page {
+  padding-block: clamp(76px, 10vw, 146px) clamp(88px, 11vw, 150px);
+  color: var(--fg);
+}
+
+.interior-page h1,
+.interior-project-detail h1,
+.interior-page h2,
+.interior-project-detail h2 {
+  font-family: var(--font-display), Arial, sans-serif;
+}
+
+.interior-work__head,
+.interior-services__head,
+.interior-contact__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(120px, 190px);
+  align-items: end;
+  gap: clamp(30px, 8vw, 130px);
+  padding-bottom: clamp(54px, 8vw, 112px);
+}
+
+.interior-work__intro,
+.interior-services__head > div:first-child,
+.interior-contact__head > div:first-child {
+  max-width: 940px;
+  min-width: 0;
+}
+
+.interior-work__head .eyebrow,
+.interior-services__head .eyebrow,
+.interior-contact__head .eyebrow {
+  margin-bottom: 27px;
+}
+
+.interior-work h1,
+.interior-services h1,
+.interior-contact h1,
+.interior-project-detail h1 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(54px, 8.4vw, 124px);
+  font-weight: 700;
+  letter-spacing: -.065em;
+  line-height: .93;
+  text-transform: uppercase;
+  white-space: pre-line;
+  text-wrap: balance;
+}
+
+.interior-work__lede,
+.interior-services__lede,
+.interior-contact__lede {
+  max-width: 510px;
+  margin: 29px 0 0;
+  color: var(--muted);
+  font-size: clamp(14px, 1.4vw, 17px);
+  line-height: 1.8;
+}
+
+.interior-work__index,
+.interior-services__index {
+  display: flex;
+  min-height: 118px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  justify-self: end;
+  width: 100%;
+  border-inline-start: 1px solid var(--line);
+  padding: 7px 0 7px 20px;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+.interior-work__index i {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+}
+
+.interior-work__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 1.4vw, 18px);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+}
+
+.interior-work__filter {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid transparent;
+  padding: 0 13px;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--font-sans), Arial, sans-serif;
+  font-size: 12px;
+  text-align: start;
+  transition: color .2s, border-color .2s;
+}
+
+.interior-work__filter:hover,
+.interior-work__filter[aria-pressed="true"] {
+  border-color: var(--line);
+  color: var(--fg);
+}
+
+.interior-work__filter i {
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+}
+
+.interior-work__list { margin-top: 4px; }
+.interior-work__row { border-bottom: 1px solid var(--line); }
+
+.interior-work__link {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr);
+  align-items: center;
+  gap: clamp(28px, 7vw, 108px);
+  padding-block: clamp(32px, 5.3vw, 76px);
+}
+
+.interior-work__row:nth-child(even) .interior-work__link {
+  grid-template-columns: minmax(260px, .7fr) minmax(0, 1.3fr);
+}
+
+.interior-work__row:nth-child(even) .interior-work__visual { order: 2; }
+.interior-work__row:nth-child(even) .interior-work__body { order: 1; }
+
+.interior-work__visual {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 1.62;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.interior-work__visual .project-mockup { height: 100%; }
+.interior-work__link:hover .project-mockup > img { transform: scale(1.035); }
+
+.interior-work__body { min-width: 0; }
+.interior-work__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 9px 18px;
+  margin-bottom: 27px;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: .06em;
+}
+
+.interior-work__meta > span:first-child { color: var(--accent); }
+.interior-work__category {
+  margin: 0 0 13px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.interior-work__body h2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 15px;
+  font-size: clamp(32px, 4.2vw, 57px);
+  font-weight: 700;
+  letter-spacing: -.055em;
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+
+.interior-work__body h2 svg {
+  flex: none;
+  margin-top: 5px;
+  color: var(--muted);
+  transition: color .2s, transform .2s;
+}
+
+.interior-work__link:hover .interior-work__body h2 svg {
+  transform: translate(3px, -3px);
+  color: var(--accent);
+}
+
+.interior-work__summary {
+  max-width: 500px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.interior-work__tags,
+.interior-project-detail__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 23px;
+}
+
+.interior-work__tags > span,
+.interior-project-detail__tags > span {
+  border: 1px solid var(--line);
+  padding: 7px 9px;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.interior-work__open {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 33px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 9px;
+  color: var(--fg);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.interior-work__open svg { color: var(--accent); }
+.interior-work__note {
+  max-width: 760px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  line-height: 1.9;
+}
+
+/* Services */
+.interior-services__head { padding-bottom: clamp(56px, 8vw, 110px); }
+.interior-services__index { min-height: 95px; }
+.interior-services__list { border-top: 1px solid var(--line); }
+
+.interior-services__item {
+  display: grid;
+  grid-template-columns: minmax(60px, .28fr) minmax(0, 1fr) 30px;
+  gap: clamp(20px, 4vw, 62px);
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+  padding-block: clamp(31px, 4.8vw, 66px);
+}
+
+.interior-services__number {
+  color: var(--accent);
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  letter-spacing: .05em;
+}
+
+.interior-services__number span { color: var(--muted); }
+.interior-services__copy { max-width: 820px; }
+
+.interior-services__copy h2 {
+  margin: -8px 0 20px;
+  font-size: clamp(30px, 4.2vw, 54px);
+  font-weight: 700;
+  letter-spacing: -.05em;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.interior-services__copy p {
+  max-width: 690px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(14px, 1.4vw, 16px);
+  line-height: 1.85;
+}
+
+.interior-services__tags {
+  display: block;
+  margin-top: 23px;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  line-height: 1.8;
+}
+
+.interior-services__mark {
+  color: var(--muted);
+  font-size: 24px;
+  line-height: 1;
+  transition: color .2s, transform .2s;
+}
+
+.interior-services__item:hover .interior-services__mark {
+  transform: translate(3px, -3px);
+  color: var(--accent);
+}
+
+.interior-services__cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 30px 60px;
+  margin-top: clamp(78px, 11vw, 150px);
+  border-top: 1px solid var(--line);
+  padding-top: clamp(36px, 5vw, 68px);
+}
+
+.interior-services__cta > div { max-width: 760px; }
+.interior-services__cta .eyebrow { margin-bottom: 24px; }
+
+.interior-services__cta h2,
+.interior-project-detail__contact h2 {
+  margin: 0;
+  font-size: clamp(36px, 5.5vw, 76px);
+  font-weight: 700;
+  letter-spacing: -.055em;
+  line-height: 1.02;
+  text-transform: uppercase;
+  white-space: pre-line;
+}
+
+.interior-services__cta > div > p:last-child {
+  max-width: 480px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.interior-services__action { justify-self: end; }
+.interior-services__cta-mark { position: absolute; inset-inline-end: 0; top: 23px; color: var(--accent); }
+
+/* Project detail */
+.interior-project-detail__hero { padding-block: clamp(42px, 6vw, 76px) 0; }
+.interior-project-detail__topline { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.interior-project-detail__topline .back-link { min-height: 38px; }
+
+.interior-project-detail__counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+
+.interior-project-detail__counter i { width: 5px; height: 5px; background: var(--accent); }
+.interior-project-detail__title { padding-block: clamp(62px, 10vw, 138px) clamp(37px, 5vw, 66px); }
+.interior-project-detail__title .eyebrow { margin-bottom: 28px; }
+.interior-project-detail h1 { font-size: clamp(70px, 14vw, 190px); }
+
+.interior-project-detail__summary {
+  max-width: 730px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: clamp(15px, 1.6vw, 19px);
+  line-height: 1.8;
+}
+
+.interior-project-detail__status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px 22px;
+  margin-top: 26px;
+  font-size: 11px;
+}
+
+.interior-project-detail__status > span {
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+.interior-project-detail__status strong { font-weight: 500; }
+
+.interior-project-detail__visual {
+  position: relative;
+  min-height: 280px;
+  aspect-ratio: 2.05;
+  overflow: hidden;
+  background: var(--panel);
+}
+
+.interior-project-detail__visual .project-mockup { height: 100%; }
+.interior-project-detail__tags { margin: 0; padding-block: 18px 43px; }
+
+.interior-project-detail__story {
+  padding-block: clamp(25px, 4vw, 54px) clamp(64px, 9vw, 118px);
+}
+
+.interior-project-detail__story-row {
+  display: grid;
+  grid-template-columns: minmax(42px, .25fr) minmax(160px, .7fr) minmax(0, 1.3fr);
+  gap: clamp(18px, 4vw, 62px);
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-block: clamp(28px, 4vw, 55px);
+}
+
+.interior-project-detail__story-index {
+  margin-top: 7px;
+  color: var(--accent);
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+}
+
+.interior-project-detail__story-row h2 {
+  margin: 0;
+  font-size: clamp(22px, 2.7vw, 34px);
+  font-weight: 700;
+  letter-spacing: -.04em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.interior-project-detail__story-row p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.interior-project-detail__end {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(250px, .85fr);
+  gap: clamp(32px, 8vw, 110px);
+  border-top: 1px solid var(--line);
+  padding-block: clamp(45px, 7vw, 88px) clamp(76px, 10vw, 130px);
+}
+
+.interior-project-detail__contact .eyebrow { margin-bottom: 24px; }
+.interior-project-detail__contact .action-link { margin-top: 30px; }
+.interior-project-detail__links { display: flex; flex-direction: column; align-items: flex-start; gap: 32px; }
+
+.interior-project-detail__next {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.interior-project-detail__next-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+.interior-project-detail__next > strong {
+  margin-top: 16px;
+  font-family: var(--font-display), Arial, sans-serif;
+  font-size: clamp(24px, 3.1vw, 38px);
+  font-weight: 700;
+  letter-spacing: -.04em;
+  text-transform: uppercase;
+}
+
+.interior-project-detail__next > span:last-child { margin-top: 9px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.interior-project-detail__next:hover > strong { color: var(--accent); }
+
+/* Contact */
+.interior-contact__head { grid-template-columns: minmax(0, 1fr) auto; padding-bottom: clamp(54px, 7vw, 95px); }
+.interior-contact__head > div:first-child { max-width: 880px; }
+.interior-contact__lede { max-width: 540px; }
+
+.interior-contact__jump {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 12px;
+  justify-self: end;
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 8px;
+  color: var(--fg);
+  font-size: 11px;
+}
+
+.interior-contact__jump svg { color: var(--accent); }
+.interior-contact__form-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  gap: clamp(35px, 8vw, 120px);
+  border-top: 1px solid var(--line);
+  padding-top: clamp(38px, 6vw, 76px);
+  scroll-margin-top: 110px;
+}
+
+.interior-contact__form-intro { max-width: 460px; }
+.interior-contact__form-intro .eyebrow { margin-bottom: 22px; }
+
+.interior-contact__form-intro h2 {
+  margin: 0 0 20px;
+  font-size: clamp(31px, 4.2vw, 53px);
+  font-weight: 700;
+  letter-spacing: -.05em;
+  line-height: 1.08;
+  text-transform: uppercase;
+  white-space: pre-line;
+}
+
+.interior-contact__form-intro > p:not(.eyebrow) {
+  max-width: 390px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.interior-contact__form-intro .interior-contact__local-note {
+  margin-top: 25px;
+  border-inline-start: 2px solid var(--accent);
+  padding-inline-start: 13px;
+  font-size: 11px;
+}
+
+.interior-contact__form { min-width: 0; }
+.interior-contact__form .contact-form { gap: 25px; }
+.interior-contact__form .form-row--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.interior-contact__form .form-field { min-width: 0; }
+.interior-contact__form input,
+.interior-contact__form select,
+.interior-contact__form textarea { min-width: 0; max-width: 100%; }
+
+/* Right-to-left typography: keep Arabic copy natural and technical indices legible. */
+html[dir="rtl"] .interior-page h1,
+html[dir="rtl"] .interior-page h2,
+html[dir="rtl"] .interior-project-detail h1,
+html[dir="rtl"] .interior-project-detail h2 {
+  font-family: var(--font-arabic), Arial, sans-serif;
+  letter-spacing: -.025em;
+  line-height: 1.28;
+}
+
+html[dir="rtl"] .interior-work__index,
+html[dir="rtl"] .interior-services__index { padding: 7px 20px 7px 0; }
+html[dir="rtl"] .interior-work__filter { font-family: var(--font-arabic), Arial, sans-serif; }
+html[dir="rtl"] .interior-project-detail__topline .back-link svg { transform: scaleX(-1); }
+html[dir="rtl"] .interior-project-detail__next-label svg { transform: scaleX(-1); }
+
+@media (max-width: 900px) {
+  .interior-work__head,
+  .interior-services__head { grid-template-columns: minmax(0, 1fr) 120px; gap: 32px; }
+  .interior-work__link,
+  .interior-work__row:nth-child(even) .interior-work__link { grid-template-columns: minmax(0, 1fr) minmax(220px, .8fr); gap: 28px; }
+  .interior-work__row:nth-child(even) .interior-work__visual { order: 2; }
+  .interior-work__row:nth-child(even) .interior-work__body { order: 1; }
+  .interior-project-detail__end { gap: 38px; }
+  .interior-contact__form-wrap { gap: 42px; }
+}
+
+@media (max-width: 680px) {
+  .interior-page { padding-block: 61px 84px; }
+  .interior-work__head,
+  .interior-services__head,
+  .interior-contact__head { grid-template-columns: 1fr; gap: 27px; padding-bottom: 52px; }
+  .interior-work h1,
+  .interior-services h1,
+  .interior-contact h1 { font-size: clamp(46px, 12vw, 70px); letter-spacing: -.055em; }
+  .interior-work__head .eyebrow,
+  .interior-services__head .eyebrow,
+  .interior-contact__head .eyebrow { margin-bottom: 22px; }
+  .interior-work__lede,
+  .interior-services__lede,
+  .interior-contact__lede { margin-top: 20px; font-size: 14px; }
+  .interior-work__index,
+  .interior-services__index { min-height: 0; width: 100%; flex-direction: row; align-items: center; justify-content: space-between; border-inline-start: 0; border-top: 1px solid var(--line); padding: 12px 0 0; }
+  .interior-work__index i { display: none; }
+  .interior-work__filters { gap: 4px; overflow-x: auto; padding-bottom: 12px; }
+  .interior-work__filter { min-height: 40px; flex: 0 0 auto; padding-inline: 10px; font-size: 11px; }
+  .interior-work__link,
+  .interior-work__row:nth-child(even) .interior-work__link { grid-template-columns: minmax(0, 1fr); gap: 22px; padding-block: 28px; }
+  .interior-work__row:nth-child(even) .interior-work__visual,
+  .interior-work__row:nth-child(even) .interior-work__body { order: initial; }
+  .interior-work__visual { aspect-ratio: 1.34; }
+  .interior-work__meta { margin-bottom: 20px; font-size: 8px; }
+  .interior-work__body h2 { font-size: clamp(32px, 9vw, 46px); }
+  .interior-work__summary { font-size: 13px; }
+  .interior-work__tags { margin-top: 17px; }
+  .interior-work__open { margin-top: 23px; }
+  .interior-work__note { font-size: 8px; }
+  .interior-services__item { grid-template-columns: 43px minmax(0, 1fr) 16px; gap: 12px; padding-block: 30px; }
+  .interior-services__copy h2 { margin: -5px 0 14px; font-size: clamp(26px, 7.5vw, 37px); }
+  .interior-services__copy p { font-size: 13px; }
+  .interior-services__tags { margin-top: 17px; font-size: 8px; }
+  .interior-services__mark { font-size: 18px; }
+  .interior-services__cta { grid-template-columns: minmax(0, 1fr); gap: 25px; margin-top: 75px; }
+  .interior-services__cta h2,
+  .interior-project-detail__contact h2 { font-size: clamp(35px, 9vw, 52px); }
+  .interior-services__action { justify-self: start; }
+  .interior-services__cta-mark { top: 18px; width: 25px; height: 25px; }
+  .interior-project-detail__hero { padding-top: 34px; }
+  .interior-project-detail__topline { align-items: flex-start; }
+  .interior-project-detail__counter { gap: 6px; font-size: 7px; }
+  .interior-project-detail__title { padding-block: 64px 32px; }
+  .interior-project-detail h1 { font-size: clamp(58px, 15vw, 100px); }
+  .interior-project-detail__summary { margin-top: 19px; font-size: 14px; }
+  .interior-project-detail__visual { min-height: 205px; aspect-ratio: 1.22; }
+  .interior-project-detail__tags { padding-block: 14px 28px; }
+  .interior-project-detail__story { padding-block: 15px 65px; }
+  .interior-project-detail__story-row { grid-template-columns: 32px minmax(0, 1fr); gap: 10px 15px; padding-block: 27px; }
+  .interior-project-detail__story-row h2 { font-size: 25px; }
+  .interior-project-detail__story-row p { grid-column: 2; font-size: 13px; }
+  .interior-project-detail__end { grid-template-columns: minmax(0, 1fr); gap: 45px; padding-block: 38px 76px; }
+  .interior-project-detail__links { gap: 27px; }
+  .interior-contact__head { align-items: start; }
+  .interior-contact__jump { justify-self: start; }
+  .interior-contact__form-wrap { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-top: 32px; }
+  .interior-contact__form-intro h2 { font-size: 36px; }
+  .interior-contact__form .form-row--two { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+}
+
+@media (max-width: 380px) {
+  .interior-project-detail__counter { max-width: 138px; justify-content: flex-end; text-align: end; }
+  .interior-services__item { grid-template-columns: 34px minmax(0, 1fr) 13px; gap: 9px; }
+  .interior-work__meta { align-items: flex-start; flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interior-work__filter,
+  .interior-work__body h2 svg,
+  .interior-services__mark,
+  .interior-project-detail__next > strong { transition: none; }
+}

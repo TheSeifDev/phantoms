@@ -85,22 +85,22 @@ export const projects: Project[] = [
     category: { en: "SaaS · Internal platform", ar: "SaaS · منصة داخلية" },
     status: { en: "Team platform", ar: "منصة للفريق" },
     summary: {
-      en: "A connected operations workspace for the people, projects and workflows that keep a growing team moving.",
-      ar: "مساحة تشغيل مترابطة للأشخاص والمشاريع وسير العمل الذي يحرك الفريق.",
+      en: "A team operations platform connecting member profiles, tasks, performance evaluations and an AI copilot in one workspace.",
+      ar: "منصة تشغيل للفريق تجمع ملفات الأعضاء والمهام وتقييم الأداء ومساعد AI في مساحة عمل واحدة.",
     },
     problem: {
       en: "Team coordination becomes fragmented when everyday work lives in too many places.",
       ar: "يتشتت تنسيق الفريق عندما تتوزع تفاصيل العمل اليومي في أماكن كثيرة.",
     },
     approach: {
-      en: "A shared dashboard brings member tools, tasks and internal workflows into one team-facing product.",
-      ar: "تجمع لوحة مشتركة أدوات الأعضاء والمهام ومسارات العمل الداخلية في منتج واحد للفريق.",
+      en: "The public repository documents a member portal, task and submission workflows, evaluations and rankings, spreadsheet exports and AI-assisted operations. Built with React, Vite and Supabase.",
+      ar: "يوثّق المستودع العام بوابة أعضاء، ومسارات مهام وتسليمات، وتقييمات وترتيب أداء، وتصدير جداول، وعمليات بمساعدة AI. مبني باستخدام React وVite وSupabase.",
     },
     outcome: {
       en: "An internal-platform project with a public code repository. The visuals here are illustrative concepts; usage and measured results are not claimed.",
       ar: "مشروع منصة داخلية له مستودع كود عام. الصور هنا تصورات توضيحية؛ لا ندّعي استخدامًا فعليًا أو نتائج مقاسة.",
     },
-    tags: ["SaaS", "Operations", "Team tools"],
+    tags: ["React", "Supabase", "Operations", "AI copilot"],
     tone: "ink",
     repository: "https://github.com/TheSeifDev/dashboard-phantoms",
   },

@@ -2,6 +2,8 @@
 
 A bilingual, responsive team and studio website for Phantoms. The public site is English-first with an Arabic/RTL switch and dark/light themes. Phase one excludes paid products, courses and checkout.
 
+The current design is a full rebuild: bold technical sans typography, graphite/off-white surfaces, a restrained vermilion signal and one original metallic hero image. It replaces the rejected paper-collage/serif direction. The home page presents each featured project once, a capability accordion, an interactive build-process selector and a compact profile/archive section. Interior pages share the new responsive editorial system. Reference research and design interpretation are recorded in [the redesign notes](docs/redesign-references.md).
+
 ## Stack
 
 - Next.js App Router, TypeScript and Tailwind CSS 4
@@ -32,7 +34,7 @@ There is no active Neon connection or migration to run. If database work is auth
 
 - `src/data/site.ts` contains the current static service and project copy. `src/data/team.ts` contains the confirmed GitHub profile for Seif Ayman (`TheSeifDev`) and three anonymous, visibly labeled profile mockups; remaining real member accounts and details are still required.
 - Add only confirmed current team names, biographies and portrait paths. A GitHub avatar may be derived only from a member's explicitly confirmed GitHub username; never infer a username or reuse archive portraits as current-member portraits.
-- `public/images/` contains original-direction hero art and compressed images supplied for the archive. The old team photos are memories, not portraits for the incoming team.
+- `public/images/` contains the site mark and compressed images supplied for the archive. The generated hero is included locally at `public/manus-storage/async-images/r6bfqbclDYhfD7A0g9gHFl/image-1.webp`, matching its unchanged project-storage URL, so static GitHub copies load the same artwork. The old team photos are memories, not portraits for the incoming team.
 - Rafiq, OMNI and Dashboard concept mockups use unchanged project-managed `/manus-storage/` URLs and are visibly labeled. Exact copies of the completed assets are also included under `public/manus-storage/`, so the same paths work in a standalone GitHub clone and static export without relying on the Preview proxy.
 - Any project mockup or concept visual must be visibly labeled as a **mockup** or **concept**. Do not present a mockup as a shipped product screen or evidence of completed functionality.
 
